@@ -5,7 +5,7 @@ author: "Statistik mit R<br>
     The R Bootcamp
   </a>
   <br>
-  <a href='https://therbootcamp.github.io/SmR_2021Apr/'>
+  <a href='https://therbootcamp.github.io/SmR_2021Oct/'>
     <i class='fas fa-clock' style='font-size:.9em;'></i>
   </a>&#8239; 
   <a href='https://therbootcamp.github.io'>
@@ -17,7 +17,7 @@ author: "Statistik mit R<br>
   <a href='https://www.linkedin.com/company/basel-r-bootcamp/'>
     <i class='fab fa-linkedin' style='font-size: .9em;'></i>
   </a>"
-date: "April 2021"
+date: "Oktober 2021"
 output:
   xaringan::moon_reader:
     css: ["default", "baselrbootcamp.css"]
@@ -45,7 +45,7 @@ layout: true
     </a>
     <a href="https://therbootcamp.github.io/">
       <font color="#7E7E7E">
-       Statistik mit R | April 2021
+       Statistik mit R | Oktober 2021
       </font>
     </a>
     </span>
@@ -1110,5 +1110,5 @@ boot.ci(B, index = 3)
 
 class: middle, center
 
-<h1><a href="https://therbootcamp.github.io/SwR_2021Apr/_sessions/RobustStats/RobustStats_practical.html">Practical</a></h1>
+<h1><a href="https://therbootcamp.github.io/SwR_2021Oct/_sessions/RobustStats/RobustStats_practical.html">Practical</a></h1>
 

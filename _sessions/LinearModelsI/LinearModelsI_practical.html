@@ -13,13 +13,22 @@
 
 <title>Lineare Modelle I</title>
 
-<script src="LinearModelsI_practical_files/header-attrs-2.6/header-attrs.js"></script>
+<script src="LinearModelsI_practical_files/header-attrs-2.10/header-attrs.js"></script>
 <script src="LinearModelsI_practical_files/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="LinearModelsI_practical_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="LinearModelsI_practical_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="LinearModelsI_practical_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="LinearModelsI_practical_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="LinearModelsI_practical_files/navigation-1.1/tabsets.js"></script>
 <link href="LinearModelsI_practical_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="LinearModelsI_practical_files/highlightjs-9.12.0/highlight.js"></script>
@@ -34,11 +43,6 @@
     </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -51,32 +55,6 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
 
 <link rel="stylesheet" href="practical.css" type="text/css" />
@@ -88,10 +66,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -108,6 +82,9 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
@@ -120,7 +97,6 @@ summary {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -184,7 +160,7 @@ summary {
 
 
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -194,7 +170,7 @@ summary {
 <col width='10%'>
 <tr style="border:none">
 <td style="display:block;width:100%;text-align:left;vertical-align:bottom;padding:0;margin:0;border:none" nowrap>
-<font style='font-style:normal'>Statistik mit R</font><br> <a href='https://therbootcamp.github.io/SmR_2021Apr/'> <i class='fas fa-clock' style='font-size:.9em;' ></i> </a> <a href='https://therbootcamp.github.io'> <i class='fas fa-home' style='font-size:.9em;'></i> </a> <a href='mailto:therbootcamp@gmail.com'> <i class='fas fa-envelope' style='font-size: .9em;'></i> </a> <a href='https://www.linkedin.com/company/basel-r-bootcamp/'> <i class='fab fa-linkedin' style='font-size: .9em;'></i> </a> <a href='https://therbootcamp.github.io'> <font style='font-style:normal'>The R Bootcamp</font> </a>
+<font style='font-style:normal'>Statistik mit R</font><br> <a href='https://therbootcamp.github.io/SmR_2021Oct/'> <i class='fas fa-clock' style='font-size:.9em;' ></i> </a> <a href='https://therbootcamp.github.io'> <i class='fas fa-home' style='font-size:.9em;'></i> </a> <a href='mailto:therbootcamp@gmail.com'> <i class='fas fa-envelope' style='font-size: .9em;'></i> </a> <a href='https://www.linkedin.com/company/basel-r-bootcamp/'> <i class='fab fa-linkedin' style='font-size: .9em;'></i> </a> <a href='https://therbootcamp.github.io'> <font style='font-style:normal'>The R Bootcamp</font> </a>
 </td>
 <td style="width:100%;vertical-align:bottom;text-align:right;padding:0;margin:0;border:none">
 <img src='https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/by-sa.png' style='height:15px;width:80px'/>
@@ -232,10 +208,7 @@ summary {
 <ol start="3" style="list-style-type: decimal">
 <li><p>Speichere das neue Skript unter dem Namen <code>lineare_modelle_practical.R</code> im <code>2_Code</code> Ordner.</p></li>
 <li><p>Lade das Paket <code>tidyverse</code>.</p></li>
-</ol>
-<pre class="r"><code>library(tidyverse)</code></pre>
-<ol start="5" style="list-style-type: decimal">
-<li>Verwende die <code>read_csv()</code> Funktion um <code>wein.csv</code> einzulesen.</li>
+<li><p>Verwende die <code>read_csv()</code> Funktion um <code>wein.csv</code> einzulesen.</p></li>
 </ol>
 <pre class="r"><code># Lese Daten ein
 wein &lt;- read_csv(file = &quot;1_Data/wein.csv&quot;)</code></pre>
@@ -255,43 +228,12 @@ wein &lt;- wein %&gt;% mutate_if(is.character, factor)</code></pre>
 <pre class="r"><code># Einfache Regression
 wein_lm &lt;- lm(formula = XX ~ XX,
               data = XX)</code></pre>
-<pre class="r"><code>wein_lm &lt;- lm(formula = Qualität ~ Restzucker,
-              data = wein)</code></pre>
 <ol start="2" style="list-style-type: decimal">
-<li>Printe das Fit-Objekt <code>wein_lm</code>. Welche Informationen werden dir angezeigt? Was sagen dir die Werte?</li>
-</ol>
-<pre class="r"><code>wein_lm</code></pre>
-<pre><code>
-Call:
-lm(formula = Qualität ~ Restzucker, data = wein)
-
-Coefficients:
-(Intercept)   Restzucker  
-    5.85532     -0.00679  </code></pre>
-<ol start="3" style="list-style-type: decimal">
-<li>Der Default-Output von <code>lm</code>-Objekten ist nicht sehr informativ. Er zeigt nur den Code und die Schätzungen für die zwei Parameter: den Intercept und das Gewicht für <code>Restzucker</code>. Verwende <code>summary()</code> um einen informativeren Output zu erhalten.</li>
+<li><p>Printe das Fit-Objekt <code>wein_lm</code>. Welche Informationen werden dir angezeigt? Was sagen dir die Werte?</p></li>
+<li><p>Der Default-Output von <code>lm</code>-Objekten ist nicht sehr informativ. Er zeigt nur den Code und die Schätzungen für die zwei Parameter: den Intercept und das Gewicht für <code>Restzucker</code>. Verwende <code>summary()</code> um einen informativeren Output zu erhalten.</p></li>
 </ol>
 <pre class="r"><code># Zeige Ergebnisse
 summary(XX)</code></pre>
-<pre class="r"><code>summary(wein_lm)</code></pre>
-<pre><code>
-Call:
-lm(formula = Qualität ~ Restzucker, data = wein)
-
-Residuals:
-   Min     1Q Median     3Q    Max 
--2.851 -0.808  0.158  0.229  3.217 
-
-Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)  5.85532    0.01645  355.89   &lt;2e-16 ***
-Restzucker  -0.00679    0.00228   -2.98   0.0029 ** 
----
-Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-
-Residual standard error: 0.873 on 6495 degrees of freedom
-Multiple R-squared:  0.00137,   Adjusted R-squared:  0.00121 
-F-statistic: 8.89 on 1 and 6495 DF,  p-value: 0.00287</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>Summary zeigt einem ausführliche Ergebnisse in fünf Sektionen:</li>
 </ol>
@@ -311,9 +253,6 @@ F-statistic: 8.89 on 1 and 6495 DF,  p-value: 0.00287</code></pre>
 </ol>
 <pre class="r"><code># Berechne Fläche unter t-Wert
 pt(q = XX, df = XX)</code></pre>
-<pre class="r"><code># Berechne Fläche unter t-Wert
-pt(q = -2.982, df = 6495)</code></pre>
-<pre><code>[1] 0.00144</code></pre>
 <ol start="9" style="list-style-type: decimal">
 <li><p>Der ermittelte Wert ist genau die Hälfte des p-Werts. Das hat damit zu tun, dass R-automatisch zweiseitig testet, d.h., Abweichungen in die positive und negative Richtung gleichermassen berücksichtigt. Hätte man eine klar gerichtete Hypothese, könnte man also den p-Wert im Ergebnis halbieren.</p></li>
 <li><p>Es gibt noch weitere Werte, die du miteinander verknüpfen kannst. Der t-Wert ergibt sich nämlich unmittelbar aus dem Gewicht (<code>Estimate</code>) und dem Standardfehler (<code>Std.Error</code>). Kannst du den Zusammenhang erkennen?</p></li>
@@ -330,65 +269,17 @@ pt(q = -2.982, df = 6495)</code></pre>
 <pre class="r"><code># Multiple Regression
 wein_lm &lt;- lm(formula = XX ~ XX + XX + XX + XX,
               data = XX)</code></pre>
-<pre class="r"><code>wein_lm &lt;- lm(formula = Qualität ~ Restzucker + pH_Wert + Alkohol + Sulphate,
-              data = wein)</code></pre>
 <ol start="2" style="list-style-type: decimal">
-<li>Printe wiederum das Modell. Wie interpretierst du die Grössen der Regressionsgewichte. Kannst du aus ihnen ablesen, welcher Prädiktor die meiste Bedeutung hat?</li>
-</ol>
-<pre class="r"><code>wein_lm</code></pre>
-<pre><code>
-Call:
-lm(formula = Qualität ~ Restzucker + pH_Wert + Alkohol + Sulphate, 
-    data = wein)
-
-Coefficients:
-(Intercept)   Restzucker      pH_Wert      Alkohol     Sulphate  
-     1.8422       0.0280      -0.0767       0.3669       0.4171  </code></pre>
-<ol start="3" style="list-style-type: decimal">
-<li>Rohe Regressionsgewichte lassen nicht darauf schliessen, welche Bedeutung ein Prädiktor hat, da die Skalierung der Prädiktoren unmittelbar mit einfliesst. Wäre z.B. Alkohol in Promille angegeben, dann wäre das Gewicht 10x grösser. Dies kannst du leicht mit dem Template unten testen. Füge die vier Prädiktoren ein sodass Alkohol innerhalb der <code>I()</code> steht und führe das Modell aus. Speichere es aber nicht.</li>
+<li><p>Printe wiederum das Modell. Wie interpretierst du die Grössen der Regressionsgewichte. Kannst du aus ihnen ablesen, welcher Prädiktor die meiste Bedeutung hat?</p></li>
+<li><p>Rohe Regressionsgewichte lassen nicht darauf schliessen, welche Bedeutung ein Prädiktor hat, da die Skalierung der Prädiktoren unmittelbar mit einfliesst. Wäre z.B. Alkohol in Promille angegeben, dann wäre das Gewicht 10x grösser. Dies kannst du leicht mit dem Template unten testen. Füge die vier Prädiktoren ein sodass Alkohol innerhalb der <code>I()</code> steht und führe das Modell aus. Speichere es aber nicht.</p></li>
 </ol>
 <pre class="r"><code># Multiple Regression
 lm(formula = XX ~ XX + XX + I(XX / 10) + XX,
    data = XX)</code></pre>
-<pre class="r"><code>lm(formula = Qualität ~ Restzucker + pH_Wert + I(Alkohol/10) + Sulphate,
-   data = wein)</code></pre>
-<pre><code>
-Call:
-lm(formula = Qualität ~ Restzucker + pH_Wert + I(Alkohol/10) + 
-    Sulphate, data = wein)
-
-Coefficients:
-  (Intercept)     Restzucker        pH_Wert  I(Alkohol/10)       Sulphate  
-       1.8422         0.0280        -0.0767         3.6687         0.4171  </code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li><p>Rgressionsgewichte müssen immer relativ zur Skalierung interpretiert werden. Nichtsdestotrotz ist bereits etwas interessantes an den Gewichten ablesbar. Schau dir das Regressionsgewicht für <code>Restzucker</code> an. War das nicht mal negativ? Führt mehr Zucker plötzlich zu höherer wahrgenommener Qualität?</p></li>
 <li><p>So einfach ist das leider nicht. In der multiplen Regression hängt alles mit allem zusammen. D.h., das Gewicht von <code>Restzucker</code> hängt von den anderen Gewichten mit ab und ist konditional zu interpretieren, was bei mehreren Prädiktoren schwierig werden kann!</p></li>
 <li><p>Schaue dir nun die <code>summary()</code> an. Welche Effekte gehen in welche Richtung, welche Effekte sind signifikant?</p></li>
-</ol>
-<pre class="r"><code>summary(wein_lm)</code></pre>
-<pre><code>
-Call:
-lm(formula = Qualität ~ Restzucker + pH_Wert + Alkohol + Sulphate, 
-    data = wein)
-
-Residuals:
-   Min     1Q Median     3Q    Max 
--3.494 -0.501 -0.035  0.492  3.099 
-
-Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)  1.84215    0.22155    8.32  &lt; 2e-16 ***
-Restzucker   0.02800    0.00225   12.43  &lt; 2e-16 ***
-pH_Wert     -0.07671    0.06256   -1.23     0.22    
-Alkohol      0.36687    0.00864   42.49  &lt; 2e-16 ***
-Sulphate     0.41713    0.06646    6.28  3.7e-10 ***
----
-Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-
-Residual standard error: 0.772 on 6492 degrees of freedom
-Multiple R-squared:  0.219, Adjusted R-squared:  0.219 
-F-statistic:  456 on 4 and 6492 DF,  p-value: &lt;2e-16</code></pre>
-<ol start="7" style="list-style-type: decimal">
 <li><p>Alkohol, Sulphate, und Restzucker hängen alle drei signifikant positiv mit der Qualität zusammen, der pH-Wert dagegen negativ, jedoch nicht signifikant. Auf Basis der Summary, kannst du jetzt ausmachen, welcher Prädiktor die grösste Bedeutung hat? Welchen Wert würdest du zu Rate ziehen?</p></li>
 <li><p>Am besten zieht man den t-Wert heran. Je grösser dieser ist, desto grösser ist das Signal für den assoziierten Prädiktor. Richte nun deine Aufmerksamkeit auf den Schlussteil. Wie gross ist <code>R-squared</code>?</p></li>
 <li><p>Das <code>R-squared</code> hat sich deutlich erhöht. Nun werden knapp 22% der Varianz des Kriteriums erklärt. Auch dies ist etwas, dass wir unmittelbar nachvollziehen können. Speichert mit dem Template unten zunächst das Kriterium, die Residuen und die gefitteten Werte. Für letztere beiden gibt es, wie ihr seht, nützliche Funktionen.</p></li>
@@ -414,9 +305,6 @@ gefitted &lt;- fitted(wein_lm)</code></pre>
 <pre class="r"><code># Multiple Regression aller Prädiktoren ausser Farbe
 wein_lm &lt;- lm(formula = XX ~ . - XX,
               data = XX)</code></pre>
-<pre class="r"><code># Multiple Regression aller Prädiktoren ausser Farbe
-wein_lm &lt;- lm(formula = Qualität ~ . - Farbe,
-              data = wein)</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Evaluiert die Summary des Modells.</li>
 </ol>
@@ -435,16 +323,6 @@ wein_lm &lt;- lm(formula = Qualität ~ . - Farbe,
 <pre class="r"><code># Multiple Regression aller Prädiktoren ausser Farbe
 wein_lm &lt;- lm(formula = XX ~ Restzucker + XX,
               data = XX)</code></pre>
-<pre class="r"><code># Multiple Regression aller Prädiktoren ausser Farbe
-lm(formula = Qualität ~ Restzucker + Alkohol,
-   data = wein)</code></pre>
-<pre><code>
-Call:
-lm(formula = Qualität ~ Restzucker + Alkohol, data = wein)
-
-Coefficients:
-(Intercept)   Restzucker      Alkohol  
-     1.8754       0.0259       0.3624  </code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Der Schlüssel zur letzten Aufgabe steckt in <code>cor(wein %&gt;% select(-Farbe))['Restzucker',]</code> und in <code>cor(wein %&gt;% select(-Farbe))['Qualität',]</code>, d.h., den bivariaten Korrelationen zwischen Restzucker und den jeweils anderen Prädiktoren und Qualität und den jeweils anderen Prädiktoren. Beides fliesst in die Berechnung des Gewichts für <code>Restzucker</code> mit ein. Siehe die Folien.</li>
 </ol>
@@ -647,7 +525,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
