@@ -80,7 +80,7 @@ In diesem Practical, analysierst du die Daten von Daryl Bem`s berüchtigter Stud
 Am Ende des Practicals wirst du wissen...
 
 1. Wie du <i>p</i>-Hacking betreibst.
-2. Wie du sample sizes bestimmsts. 
+2. Wie du sample sizes bestimmst. 
 3. Wie du Konfidenzintervalle berechnest. 
 4. Wie du Bayesianische Statistiken rechnest. 
 
