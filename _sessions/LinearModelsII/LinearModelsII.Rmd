@@ -340,7 +340,8 @@ lm(Nächte_log ~ Region,
 # Regulärer t-test
 t_test <- 
 t.test(tour$Nächte_log[tour$Region == 'Europa'],
-       tour$Nächte_log[tour$Region == 'Asien'])
+       tour$Nächte_log[tour$Region == 'Asien'],
+       var.equal = TRUE)
 
 # Regression mit dummy
 lm_dummy <- lm(
