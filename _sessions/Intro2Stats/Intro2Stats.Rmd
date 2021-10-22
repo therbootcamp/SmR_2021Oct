@@ -989,11 +989,6 @@ $$ \large \bar{X} \xrightarrow{d} \mathcal{N}(\mu, \frac{\sigma}{\sqrt{n}}) $$
 
 ]
 
----
-class: middle, center
-
-<h1><a href="https://www.dropbox.com/s/ei41qlpl738yu3q/TheRBootcamp.zip?dl=1">Projekt</a></h1>
-
 
 ---
 class: middle, center
