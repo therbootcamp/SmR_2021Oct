@@ -91,7 +91,7 @@ In 2 Tagen seid ihr weit gekommen.
 
 .pull-right4[
 
-<img src="https://therbootcamp.github.io/SmR_2021Apr/_sessions/Welcome/image/schedule.png" height="580" align="center">
+<img src="https://therbootcamp.github.io/SmR_2021Oct/_sessions/Welcome/image/schedule.png" height="580" align="center">
 ]
 
 ---
@@ -408,7 +408,7 @@ Das Netz ist vll. der beste Ort für Informationen über R.
       <font style="font-size:20px;weight:700"><br>Maschinelles Lernen mit R<br></font><br>
       <br>
       <img src="https://therbootcamp.github.io/img/courses/3.png" height="180px" style="border-radius:50%;border:10px solid #E9ECEF"></img><br><br>
-      <high>Mai 14/15,<br>2021</high><br><br><br><br>
+      <high>Nov 19/20,<br>2021</high><br><br><br><br>
       </a>
     </p>
   </td>
@@ -418,7 +418,7 @@ Das Netz ist vll. der beste Ort für Informationen über R.
       <font style="font-size:20px;weight:700"><br>Reporting mit R<br><br></font><br>
       <br>
       <img src="https://therbootcamp.github.io/img/courses/4.png" height="180px" style="border-radius:50%;border:10px solid #E9ECEF"></img><br><br>
-      <high>Juni 25/26,<br>2021</high><br><br><br><br>
+      <high>tba</high><br><br><br><br>
       </a>
     </p>
   </td>
