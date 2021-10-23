@@ -222,19 +222,17 @@ library(pwr)
 library(rstanarm)
 library(BayesFactor)</code></pre>
 <ol start="5" style="list-style-type: decimal">
-<li>Verwende die <code>read_csv()</code> Funktion um <code>psi1</code>, die Daten des ersten Experiments, und <code>psi2</code>, die Daten des zweiten Experiments einzulesen.</li>
+<li>Verwende die <code>read_csv()</code> Funktion um <code>psi1</code>, die Daten des ersten Experiments, einzulesen.</li>
 </ol>
 <pre class="r"><code># Lade die Daten
-psi1 &lt;- read_csv(file = &quot;1_Data/psi_exp1.csv&quot;)
-psi2 &lt;- read_csv(file = &quot;1_Data/psi_exp2.csv&quot;)</code></pre>
+psi1 &lt;- read_csv(file = &quot;1_Data/psi_exp1.csv&quot;)</code></pre>
 <ol start="6" style="list-style-type: decimal">
-<li><p>Printe die Datensätze.</p></li>
+<li><p>Printe den Datensatz.</p></li>
 <li><p>Verwende <code>names(XX)</code>, <code>summary(XX)</code>, und <code>View(XX)</code> um einen weiteren Überblick über die Daten zu bekommen.</p></li>
 <li><p>Wiederum, führe den Code unten aus um sicherzustellen, dass alle <code>character</code> Variablen als Faktoren vorliegen, was den statistischen Modellen hilft kategoriale Variablen richtig zu interpretieren.</p></li>
 </ol>
 <pre class="r"><code># Konvertiere alle character zu factor
-psi1 &lt;- psi1 %&gt;% mutate_if(is.character, factor)
-psi2 &lt;- psi2 %&gt;% mutate_if(is.character, factor)</code></pre>
+psi1 &lt;- psi1 %&gt;% mutate_if(is.character, factor)</code></pre>
 </div>
 <div id="b---psi-hacking-wettbewerb" class="section level3">
 <h3>B - p(si)-Hacking Wettbewerb</h3>
@@ -287,13 +285,6 @@ Wettbewerb 1
 </td>
 <td>
 <a href="https://docs.google.com/forms/d/e/1FAIpQLScVefMfFoLj9GzL8hdXbCp91WcSiI6cVrg_K1b2tMhdPvIERA/viewform?usp=sf_link"><font style="font-size:18px;font-weight:900">Einreichen</font></a>
-</td>
-</tr>
-<td>
-Wettbewerb 2
-</td>
-<td>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSf9zbn6kxkIvn3k4bkqjEzz4OXCxE3HGEIBB_aL8rYT5mY7pQ/viewform?usp=sf_link"><font style="font-size:18px;font-weight:900">Einreichen</font></a>
 </td>
 </tr>
 </table>
@@ -454,16 +445,11 @@ posterior(bm2, iterations = 1000)</code></pre>
 <td align="left">200</td>
 <td align="left">7</td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://therbootcamp.github.io/SmR_2020Mai/1_Data/psi_exp2.csv">psi_exp2.csv</a></td>
-<td align="left">150</td>
-<td align="left">5</td>
-</tr>
 </tbody>
 </table>
-<p>Die Daten stammen von einer tatsächlichen (para-) psychologischen Studie, die die menschliche Fähigkeit in die Zukunft zu sehen überprüft hat (<a href="https://therbootcamp.github.io/SmR_2020Mai/_sessions/NewStats/literature/Bem_Psi_2011.pdf">“Feel the future”</a>). Die mittlerweile berüchtigte Studie wurde in einem etablierten Journal der Sozialpsychologie publiziert, was damit nicht unerheblich zu einer Bewegung der methodischen Revision in der Psychologie geführt hat. Die Dateien enthalten die Daten der ersten beiden Experimente. Das erste Experiment untersuchte ob Menschen besser als eine Zufallsrate von 50% vorhersagen können, hinter welchem von zwei Vorhängen ein Bild versteckt ist, insbesondere in dem Fall in dem sich ein erotisches Bild dahinter versteckt. Experiment zwei ist ein Replikationsversuch der erste Studie. Beide Studien haben auch das Konstrukt <em>Stimulus seeking</em> mituntersucht, was ähnlich zu Extraversion zu interpetieren ist, um zu untersuchen, ob Leute mit hohem <em>Stimulus seeking</em> vielleicht höhere <em>psi</em> Fähigkeiten aufweisen.</p>
-<div id="psi_exp1.csv-psi_exp2.csv" class="section level4">
-<h4>psi_exp1.csv &amp; psi_exp2.csv</h4>
+<p>Die Daten stammen von einer tatsächlichen (para-) psychologischen Studie, die die menschliche Fähigkeit in die Zukunft zu sehen überprüft hat (<a href="https://therbootcamp.github.io/SmR_2020Mai/_sessions/NewStats/literature/Bem_Psi_2011.pdf">“Feel the future”</a>). Die mittlerweile berüchtigte Studie wurde in einem etablierten Journal der Sozialpsychologie publiziert, was damit nicht unerheblich zu einer Bewegung der methodischen Revision in der Psychologie geführt hat. Die Dateien enthalten die Daten des ersten Experiments. Das erste Experiment untersuchte ob Menschen besser als eine Zufallsrate von 50% vorhersagen können, hinter welchem von zwei Vorhängen ein Bild versteckt ist, insbesondere in dem Fall in dem sich ein erotisches Bild dahinter versteckt. Bem’s Studien haben auch das Konstrukt <em>Stimulus seeking</em> mituntersucht, was ähnlich zu Extraversion zu interpetieren ist, um zu untersuchen, ob Leute mit hohem <em>Stimulus seeking</em> vielleicht höhere <em>psi</em> Fähigkeiten aufweisen.</p>
+<div id="psi_exp1.csv" class="section level4">
+<h4>psi_exp1.csv</h4>
 <table>
 <colgroup>
 <col width="26%" />
